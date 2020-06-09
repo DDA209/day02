@@ -11,6 +11,7 @@ var letter = sentence[i].substring(0, 1);
 
 var upper = letter.toUpperCase();
 
+sentence[i].substring(0,1) = upper;
 
 console.log(sentence);
 console.log(letter);
