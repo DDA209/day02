@@ -1,27 +1,22 @@
-var test = "what a wonderful world";
+var test = "what a beautiful world";
 
 
-// function letterCapitalize(sentence) {
+function letterCapitalize(sentence) {
 
-i = 2
+    var arrSentence = sentence.split(" ");      // décomposition de la phrase en mots
 
-var sentence = test.split(" ");
+    for (i = 0; i < arrSentence.length; i++ ){
 
-var letter = sentence[i].substring(0, 1);
+        var word = arrSentence[i];              // Récupération du premier mot
+        var arrWord = word.split("");           // décomposition du mot en lettres
+        var letter = arrWord[0].toUpperCase();
+        arrWord[0] = letter;
+        arrSentence[i] = arrWord.join("");      //arrSentence[i] = (arrWord.toString()).replace(/,/g, "");
+        sentence = arrSentence.join(" ");
 
-var upper = letter.toUpperCase();
+    }
+    return sentence;
 
-sentence[i].substring(0,1) = upper;
+}
 
-console.log(sentence);
-console.log(letter);
-console.log(upper);
-
-
-
-
-
-//     retrun;
-// }
-
-// console.log(letterCapitalize(test));
+console.log(letterCapitalize(test))

@@ -1,5 +1,5 @@
 function simpleAdding(num) {
-    for (var i = 1; i<= num ; i++){
+    for (var i = 1; i <= num; i++){
         result =+ i;
     }
     return result
